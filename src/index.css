@@ -1,0 +1,51 @@
+/* فونت لوکال IRANSans */
+@font-face {
+  font-family: 'IRANSans';
+  src: url('/src/assets/fonts/IRANSansWeb.woff2') format('woff2'),
+       url('/src/assets/fonts/IRANSansWeb.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Tailwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* اعمال فونت و رنگ روی کل سایت */
+@layer base {
+  body {
+    @apply font-primary bg-background text-text-tprimary;
+  }
+}
+
+
+html {
+  direction: rtl;
+}
+
+body {
+  direction: rtl;
+  text-align: right;
+}
+@keyframes loading{
+
+0%{
+
+width:0%;
+
+}
+
+100%{
+
+width:100%;
+
+}
+
+}
+
+.animate-\[loading_2s_linear\]{
+
+animation:loading 2s linear forwards;
+
+}

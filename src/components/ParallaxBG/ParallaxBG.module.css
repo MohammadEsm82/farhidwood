@@ -1,0 +1,486 @@
+.main {
+  position: relative;
+  width: 100%;
+  height: 100svh;
+  min-height: 700px;
+  overflow: hidden;
+  background: #080706;
+  isolation: isolate;
+}
+
+
+/* =========================================
+   BACKGROUND
+========================================= */
+
+.background {
+  position: absolute;
+  inset: -8%;
+  z-index: -3;
+
+  background-image: url("../../assets/picture/hero.webp");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  will-change: transform;
+}
+
+
+/* =========================================
+   DARK OVERLAY
+========================================= */
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.88) 0%,
+      rgba(0, 0, 0, 0.62) 35%,
+      rgba(0, 0, 0, 0.28) 65%,
+      rgba(0, 0, 0, 0.72) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.45) 0%,
+      transparent 40%,
+      rgba(0, 0, 0, 0.85) 100%
+    );
+}
+
+
+/* =========================================
+   GOLD GLOW
+========================================= */
+
+.goldGlow {
+  position: absolute;
+  z-index: -1;
+
+  width: 500px;
+  height: 500px;
+
+  left: -180px;
+  bottom: -200px;
+
+  border-radius: 50%;
+
+  background: rgba(198, 157, 76, 0.15);
+
+  filter: blur(120px);
+
+  pointer-events: none;
+}
+
+
+.goldGlowSecond {
+  position: absolute;
+  z-index: -1;
+
+  width: 350px;
+  height: 350px;
+
+  right: 5%;
+  top: 25%;
+
+  border-radius: 50%;
+
+  background: rgba(198, 157, 76, 0.08);
+
+  filter: blur(120px);
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.content {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 8%;
+}
+
+
+/* =========================================
+   TEXT WRAPPER
+========================================= */
+
+.textWrapper {
+  max-width: 780px;
+  margin-top: 50px;
+}
+
+
+/* =========================================
+   LABEL
+========================================= */
+
+.label {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  margin-bottom: 25px;
+
+  color: #c8a96a;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  letter-spacing: 6px;
+}
+
+
+.labelLine {
+  width: 45px;
+  height: 1px;
+
+  background: #c8a96a;
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+.title {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: clamp(4rem, 7vw, 8rem);
+
+  font-weight: 900;
+
+  line-height: 1;
+
+  letter-spacing: -4px;
+
+  text-shadow:
+    0 5px 30px rgba(0, 0, 0, 0.6);
+}
+
+
+/* =========================================
+   SUBTITLE
+========================================= */
+
+.subtitle {
+  margin: 18px 0 0;
+
+  color: #c8a96a;
+
+  font-size: clamp(2rem, 4vw, 4.5rem);
+
+  font-weight: 800;
+
+  line-height: 1.1;
+
+  letter-spacing: -2px;
+
+  text-shadow:
+    0 5px 30px rgba(0, 0, 0, 0.6);
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.description {
+  margin-top: 35px;
+
+  color: rgba(255, 255, 255, 0.68);
+
+  font-size: 17px;
+
+  line-height: 2.2;
+
+  max-width: 650px;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  margin-top: 42px;
+}
+
+
+/* =========================================
+   PRIMARY BUTTON
+========================================= */
+
+.primaryButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 20px;
+
+  padding: 16px 26px;
+
+  border: 1px solid #c8a96a;
+
+  border-radius: 999px;
+
+  color: #111;
+
+  background: #c8a96a;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.4s ease,
+    background 0.4s ease,
+    color 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+
+.primaryButton:hover {
+  transform: translateY(-4px);
+
+  background: #e0c486;
+
+  box-shadow:
+    0 15px 50px rgba(200, 169, 106, 0.25);
+}
+
+
+.primaryButton svg {
+  transition: transform 0.4s ease;
+}
+
+
+.primaryButton:hover svg {
+  transform: translateX(-6px);
+}
+
+
+/* =========================================
+   SECONDARY BUTTON
+========================================= */
+
+.secondaryButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 16px 26px;
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  border-radius: 999px;
+
+  color: white;
+
+  background: rgba(255, 255, 255, 0.04);
+
+  backdrop-filter: blur(12px);
+
+  font-size: 15px;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.4s ease,
+    border-color 0.4s ease,
+    background 0.4s ease;
+}
+
+
+.secondaryButton:hover {
+  transform: translateY(-4px);
+
+  border-color: #c8a96a;
+
+  background: rgba(200, 169, 106, 0.1);
+}
+
+
+/* =========================================
+   SCROLL
+========================================= */
+
+.scroll {
+  position: absolute;
+
+  left: 50%;
+  bottom: 35px;
+
+  transform: translateX(-50%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 10px;
+
+  color: rgba(255, 255, 255, 0.5);
+
+  font-size: 9px;
+
+  letter-spacing: 5px;
+
+  pointer-events: none;
+}
+
+
+.scroll svg {
+  color: #c8a96a;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1024px) {
+
+  .content {
+    padding: 0 6%;
+  }
+
+  .textWrapper {
+    max-width: 650px;
+  }
+
+  .description {
+    font-size: 15px;
+  }
+
+}
+
+
+@media (max-width: 768px) {
+
+  .main {
+    min-height: 680px;
+  }
+
+  .background {
+    background-position: 60% center;
+  }
+
+  .overlay {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.86),
+        rgba(0, 0, 0, 0.55)
+      ),
+      linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.3),
+        rgba(0, 0, 0, 0.85)
+      );
+  }
+
+  .content {
+    align-items: center;
+    padding: 0 25px;
+  }
+
+  .textWrapper {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 40px;
+  }
+
+  .label {
+    font-size: 9px;
+    letter-spacing: 4px;
+  }
+
+  .labelLine {
+    width: 30px;
+  }
+
+  .title {
+    font-size: clamp(3.2rem, 14vw, 5rem);
+    letter-spacing: -2px;
+  }
+
+  .subtitle {
+    font-size: clamp(1.8rem, 8vw, 3rem);
+  }
+
+  .description {
+    margin-top: 25px;
+
+    font-size: 14px;
+
+    line-height: 2;
+
+    max-width: 100%;
+  }
+
+  .buttons {
+    flex-direction: column;
+
+    align-items: stretch;
+
+    width: 100%;
+
+    margin-top: 32px;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    width: 100%;
+  }
+
+  .scroll {
+    bottom: 20px;
+  }
+
+}
+
+
+@media (max-width: 480px) {
+
+  .main {
+    min-height: 650px;
+  }
+
+  .content {
+    padding: 0 20px;
+  }
+
+  .title {
+    font-size: 3.1rem;
+  }
+
+  .subtitle {
+    font-size: 1.8rem;
+  }
+
+  .description {
+    font-size: 13px;
+  }
+
+}
